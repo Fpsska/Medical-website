@@ -1,7 +1,8 @@
 :root {
+    --font-size: 14px;
     --yellow-color: #ffd748;
     --white-color: #fff;
-    --dark-color: #423f45;
+    --dark-color: hsl(270, 5%, 26%);
     --blue-color: #104987;
     --green-color: #38df7a;
     --violet-color: #5f40a1;
