@@ -1,0 +1,21 @@
+@import '../libs/normalize.css';
+@import './_reset.css';
+@import './_roots.css';
+
+/* /. imports */
+
+html {
+    font-size: 14px;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+}
+
+/* /. general-styles */

@@ -45,11 +45,10 @@ module.exports = {
                 loader: 'html-loader'
             },
             {
-                test: /\.(c|sa|sc)ss$/i,
+                test: /\.css$/i,
                 use: [
                     devMode ? 'style-loader' : MiniCssExtractPlugin.loader, // add styles in html like separate file for prod mode
-                    'css-loader',
-                    'sass-loader'
+                    'css-loader'
                 ]
             },
             {
