@@ -909,6 +909,7 @@ body {
 
 .price .price__value {
     font-size: 1.2rem;
+    display: inline-block;
 }
 
 .price .price__value:not(:last-child) {
@@ -917,6 +918,44 @@ body {
 
 .price .price__value--new {
     font-size: 1.4rem;
+}
+.price .price__value--new {
+    cursor: pointer;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+@keyframes shake {
+    2%,
+    18% {
+        /* transform: translate3d(-5px, 0, 0); */
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    4%,
+    16% {
+        /* transform: translate3d(5px, 0, 0); */
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    6%,
+    10%,
+    14% {
+        /* transform: translate3d(-5px, 0, 0); */
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    8%,
+    12% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    18.1% {
+        transform: translateX(0) rotate(0);
+    }
 }
 
 .price .price__value--old {
