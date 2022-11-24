@@ -1,5 +1,6 @@
 const burgerBtn = document.querySelector('.burger-button');
 const burger = document.querySelector('.burger');
+const aboutSection = document.querySelector('.about');
 
 // /. variables
 
@@ -22,6 +23,17 @@ document.addEventListener('keydown', e => {
     if (e.code === 'Escape' && isVisible) {
         burgerBtn.classList.remove('transformed');
         burger.classList.remove('visible');
+    }
+});
+
+window.addEventListener('scroll', () => {
+    const { height } = aboutSection.getBoundingClientRect();
+    if (window.scrollY >= parseInt(height)) {
+        burgerBtn.classList.add('dark');
+        burger.classList.add('dark');
+    } else {
+        burgerBtn.classList.remove('dark');
+        burger.classList.remove('dark');
     }
 });
 

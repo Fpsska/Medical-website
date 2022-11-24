@@ -70,13 +70,15 @@ body {
     position: fixed;
     transition: all 0.45s ease-in-out;
     background-color: rgba(255, 255, 255, 0.1);
-    /* left: -100%; */
     top: -100%;
     z-index: 2;
 }
 .burger.visible {
-    /* left: 0; */
     top: 0;
+}
+
+.burger.dark .burger__wrapper .nav__link {
+    color: #000;
 }
 
 .burger .burger__wrapper {
@@ -106,6 +108,12 @@ body {
     height: 1.2rem;
     margin: 1rem;
     background-color: transparent;
+}
+
+.burger-button.dark span,
+.burger-button.dark::before,
+.burger-button.dark::after {
+    background-color: #000;
 }
 
 .burger-button.transformed span {
@@ -161,7 +169,7 @@ body {
 }
 .nav .nav__link {
     font-size: 1.1rem;
-    transition: color 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 .nav .nav__link:hover {
     color: var(--blue-color);
