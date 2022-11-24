@@ -1,11 +1,33 @@
+@media screen and (max-width: 1200px) {
+    .order .order__wrapper {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .order .order__section--info {
+        grid-column: 5 span;
+    }
+    .order .order__section--form {
+        grid-column: 3 span;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .promotion .promotion__section {
         grid-template-columns: repeat(8, 1fr);
         grid-gap: 2rem;
     }
+    .order .order__wrapper {
+        grid-gap: 2rem;
+    }
     .promotion .promotion__preview,
     .promotion .promotion__description {
         grid-column: 8 span;
+    }
+    .order .order__section--info,
+    .order .order__section--form {
+        grid-column: 8 span;
+    }
+    .order .price {
+        margin-bottom: 1rem;
     }
 }
 
@@ -66,6 +88,13 @@
     }
     .product .ingredient:not(:last-child) {
         margin: 0 0 4rem 0;
+    }
+    .order .order__product-name,
+    .order .order__price {
+        text-align: center;
+    }
+    .order .price {
+        margin-bottom: 1.4rem;
     }
 }
 

@@ -313,6 +313,153 @@ body {
 
 /* /. features */
 
+.order {
+    margin: 5rem 0;
+}
+
+.order .order__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: var(--gap);
+}
+
+.order .order__section {
+    /* grid-column: 6 span; */
+}
+
+.order .order__section--info {
+    grid-column: 8 span;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order .order__section--form {
+    grid-column: 4 span;
+}
+
+.order .order__preview {
+    position: relative;
+    min-height: 40rem;
+    overflow: hidden;
+    margin-bottom: 0.1rem;
+}
+
+.order .order__image {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.order .order__product-name {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #888;
+}
+
+.order .order__timer {
+    margin: auto;
+}
+
+/* /. order */
+
+.timer {
+    font-size: 1.2rem;
+    font-style: oblique;
+}
+
+.timer .timer__count {
+    font-weight: 600;
+}
+
+/* /. timer */
+
+.price .price__value {
+    font-size: 1.2rem;
+}
+
+.price .price__value:not(:last-child) {
+    margin-right: 0.45rem;
+}
+
+.price .price__value--new {
+    font-size: 1.4rem;
+}
+
+.price .price__value--old {
+    text-decoration: line-through;
+}
+
+/* /. price */
+
+.form .form__input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.form .form__input-wrapper {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+}
+.form .form__input-wrapper:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.form .form__group {
+    display: flex;
+    margin-bottom: 0.65rem;
+}
+
+.form .form__input {
+}
+
+.form .form__input:focus {
+    outline: 1px solid var(--dark-color);
+}
+
+.form .form__label {
+    opacity: 0;
+    position: absolute;
+    top: -35%;
+    right: 0;
+    transition: all 0.15s ease-in-out;
+    padding: 0 1rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #888;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form .form__input:focus + .form__label {
+    opacity: 1;
+    transform: translateY(100%);
+}
+
+.form .form__label--phone {
+    max-width: 12rem;
+    padding: 0.15rem 0.45rem;
+}
+
+.form .form__label--name {
+    max-width: 6rem;
+    padding: 0.15rem 0.35rem;
+}
+
+.form .form__button {
+    background-color: transparent;
+    border: 1px solid #888;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+/* /. form */
+
 .footer {
     padding: 2rem;
 }
