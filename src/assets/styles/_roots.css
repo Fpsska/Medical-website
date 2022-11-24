@@ -1,5 +1,6 @@
 :root {
     --font-size: 14px;
+    --gap: 4rem;
     --yellow-color: #ffd748;
     --white-color: #fff;
     --dark-color: hsl(270, 5%, 26%);

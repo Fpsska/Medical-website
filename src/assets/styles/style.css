@@ -1,12 +1,14 @@
 @import '../libs/normalize.css';
+@import '../libs//swiper.css';
+/* @import './_media.css'; */
 @import './_reset.css';
 @import './_roots.css';
-@import '../libs//swiper.css';
 
 /* /. imports */
 
 html {
-    font-size: 14px;
+    font-size: var(--font-size);
+    height: 100%;
 }
 
 html,
@@ -17,12 +19,32 @@ body {
     color: var(--dark-color);
     font-size: var(--font-size);
     font-family: Roboto, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    flex: 0 0 auto;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.main > section:not(:last-child) {
+    margin-bottom: 6rem;
+}
+
+.footer {
+    flex: 0 0 auto;
 }
 
 /* /. general-styles */
 
 .container {
-    max-width: 1386px;
+    max-width: 1360px;
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
@@ -32,7 +54,7 @@ body {
     font-size: 2rem;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 1.7rem;
+    margin-bottom: 3rem;
 }
 
 .header .header__wrapper {
@@ -94,7 +116,7 @@ body {
 .about .about__content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 4rem;
+    grid-gap: var(--gap);
     z-index: 1;
 }
 
@@ -142,14 +164,10 @@ body {
 
 /* /. about */
 
-.product {
-    margin: 5rem 0;
-}
-
 .product .product__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 4rem;
+    grid-gap: var(--gap);
     align-items: center;
 }
 
@@ -183,6 +201,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .ingredient .ingredient__image {
@@ -199,10 +218,6 @@ body {
 }
 
 /* /. ingredient */
-
-.testimonials {
-    margin: 5rem 0;
-}
 
 /* /. testimonials */
 
@@ -231,11 +246,11 @@ body {
     margin: 1rem 0 0.45rem 0;
 }
 
-/* /. review */
-
-.promotion {
-    margin: 5rem 0;
+.review .review__text {
+    text-align: center;
 }
+
+/* /. review */
 
 .promotion .promotion__wrapper {
     display: flex;
@@ -245,7 +260,7 @@ body {
 .promotion .promotion__section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 4rem;
+    grid-gap: var(--gap);
     margin-bottom: 2rem;
 }
 
@@ -271,19 +286,16 @@ body {
 
 .features {
     display: grid;
-    grid-gap: 4rem;
+    grid-gap: var(--gap);
     grid-template-columns: repeat(12, 1fr);
-    padding: 2rem 2rem;
+    justify-content: space-between;
+    padding: 2rem 1rem;
 }
 
 .features .features__item {
     position: relative;
     grid-column: 4 span;
     margin: 0 auto;
-}
-
-.features .features__item:not(:last-child) {
-    margin-right: 4rem;
 }
 
 .features .features__item::before {
@@ -300,3 +312,13 @@ body {
 }
 
 /* /. features */
+
+.footer {
+    padding: 2rem;
+}
+
+.footer .footer__text {
+    text-align: center;
+}
+
+/* /. footer */
