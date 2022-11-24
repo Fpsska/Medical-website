@@ -65,6 +65,94 @@ body {
 
 /* /. header */
 
+.burger {
+    width: 100%;
+    position: fixed;
+    transition: all 0.45s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* left: -100%; */
+    top: -100%;
+    z-index: 2;
+}
+.burger.visible {
+    /* left: 0; */
+    top: 0;
+}
+
+.burger .burger__wrapper {
+    padding: 1rem 1.2rem;
+}
+
+.burger .burger__nav .nav__menu {
+    flex-direction: column;
+}
+
+.burger .burger__nav .nav__item:not(:last-child) {
+    margin: 0 0 1rem 0;
+}
+
+.burger .burger__nav .nav__link {
+    color: #999;
+}
+
+.burger-button {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.2rem;
+    margin: 1rem;
+    background-color: transparent;
+}
+
+.burger-button.transformed span {
+    opacity: 0;
+}
+
+.burger-button.transformed::before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.burger-button.transformed::after {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+.burger-button::before,
+.burger-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--white-color);
+    transition: transform 0.15s ease-in-out;
+}
+
+.burger-button::before {
+    bottom: 0;
+    top: auto;
+}
+
+.burger-button::after {
+    top: 0;
+}
+
+.burger-button span {
+    opacity: 1;
+    height: 1px;
+    width: 100%;
+    transition: all 0.1s ease;
+    background-color: var(--white-color);
+}
+
+/* /. burger */
+
 .nav .nav__menu {
     display: flex;
 }
@@ -76,7 +164,7 @@ body {
     transition: color 0.35s ease-in-out;
 }
 .nav .nav__link:hover {
-    color: var(--violet-color);
+    color: var(--blue-color);
 }
 
 /* /. nav */
@@ -111,6 +199,7 @@ body {
 .about .about__wrapper {
     display: flex;
     flex-direction: column;
+    padding: 2rem 0;
 }
 
 .about .about__content {
@@ -321,10 +410,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: var(--gap);
-}
-
-.order .order__section {
-    /* grid-column: 6 span; */
 }
 
 .order .order__section--info {

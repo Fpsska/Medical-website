@@ -68,6 +68,15 @@
 }
 
 @media screen and (max-width: 475px) {
+    .header .header__wrapper {
+        padding: 0;
+    }
+    .header__nav {
+        display: none;
+    }
+    .burger-button {
+        display: flex;
+    }
     .about .about__content,
     .product .product__wrapper,
     .promotion .promotion__section,
