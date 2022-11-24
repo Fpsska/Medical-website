@@ -57,6 +57,14 @@ body {
     margin-bottom: 3rem;
 }
 
+.header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
 .header .header__wrapper {
     display: flex;
     justify-content: center;
@@ -316,8 +324,6 @@ body {
 
 /* /. ingredient */
 
-/* /. testimonials */
-
 .review {
     display: flex;
     flex-direction: column;
@@ -460,6 +466,9 @@ body {
 .timer {
     font-size: 1.2rem;
     font-style: oblique;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timer .timer__count {
@@ -504,9 +513,6 @@ body {
 .form .form__group {
     display: flex;
     margin-bottom: 0.65rem;
-}
-
-.form .form__input {
 }
 
 .form .form__input:focus {
