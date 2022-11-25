@@ -53,7 +53,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .about .about__content,
+    .about .about__content {
+        grid-template-columns: repeat(8, 1fr);
+    }
     .about .about__preview,
     .about .about__description {
         grid-column: 8 span;

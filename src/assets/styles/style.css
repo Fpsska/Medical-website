@@ -66,11 +66,15 @@ body {
 /* /. modificators */
 
 .header {
-    position: fixed;
     z-index: 2;
-    top: 0;
-    width: 100%;
     background-color: var(--white-color);
+    transition: all 0.35s linear;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.header.fixed {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .header .header__wrapper {
@@ -82,15 +86,17 @@ body {
 /* /. header */
 
 .burger {
-    width: 100%;
     position: fixed;
+    width: 100%;
     transition: all 0.45s ease-in-out;
     background-color: rgba(255, 255, 255, 0.1);
-    top: -100%;
+    transform: translateY(-100%);
+    opacity: 0;
     z-index: 2;
 }
 .burger.visible {
-    top: 0;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .burger.dark .burger__wrapper .nav__link {
@@ -199,6 +205,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 80vh;
+    padding-top: 5rem;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
 }
