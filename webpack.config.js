@@ -100,6 +100,12 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name][ext]'
                 }
+            },
+            {
+                test: /\.(mp4|webm|ogg)$/i,
+                generator: {
+                    filename: 'assets/videos/[name][ext]'
+                }
             }
         ]
     }
