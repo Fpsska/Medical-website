@@ -3,6 +3,7 @@ import './assets/styles/style.css';
 import './assets/styles/_media.css';
 
 import './assets/js/timer.js';
+import './assets/js/scrollTop.js';
 import './assets/js/anchor.js';
 import './assets/js/form.js';
 import './assets/js/slider.js';

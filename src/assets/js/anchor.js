@@ -1,4 +1,4 @@
-const anchors = document.querySelectorAll('a');
+const anchors = document.querySelectorAll('.nav__link');
 
 // /. variables
 
