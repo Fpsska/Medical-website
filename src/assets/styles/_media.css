@@ -10,6 +10,27 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .product .product__wrapper {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .product .product__preview {
+        grid-column: 8 span;
+    }
+    .product .product__section {
+        flex-direction: row;
+        grid-column: 8 span;
+        justify-content: space-between;
+    }
+    .product .product__ingredient .ingredient__image {
+        width: 12rem;
+        height: 12rem;
+    }
+    .product .product__ingredient:not(:last-child) {
+        margin: 0 1rem 0 0;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .promotion .promotion__section {
         grid-template-columns: repeat(8, 1fr);
@@ -33,24 +54,12 @@
 
 @media screen and (max-width: 768px) {
     .about .about__content,
-    .product .product__wrapper {
-        grid-template-columns: repeat(8, 1fr);
-    }
     .about .about__preview,
-    .about .about__description,
-    .product .product__preview {
+    .about .about__description {
         grid-column: 8 span;
     }
     .about .about__description {
         margin-left: 1rem;
-    }
-    .product .product__section {
-        flex-direction: row;
-        grid-column: 8 span;
-        justify-content: space-between;
-    }
-    .product .product__ingredient:not(:last-child) {
-        margin: 0 4rem 0 0;
     }
 }
 
@@ -62,8 +71,21 @@
     .promotion .features__item {
         grid-column: 8 span;
     }
-    .product .ingredient:not(:last-child) {
-        margin-right: 2rem;
+    .product .product__ingredient:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product .product__section {
+        flex-direction: column;
+    }
+    .product .product__ingredient:not(:last-child) {
+        margin: 0 0 4rem 0;
+    }
+    .product .product__ingredient .ingredient__image {
+        width: 14rem;
+        height: 14rem;
     }
 }
 
@@ -91,12 +113,6 @@
     .promotion .promotion__description,
     .promotion .features__item {
         grid-column: 4 span;
-    }
-    .product .product__section {
-        flex-direction: column;
-    }
-    .product .ingredient:not(:last-child) {
-        margin: 0 0 4rem 0;
     }
     .order .order__product-name,
     .order .order__price {
