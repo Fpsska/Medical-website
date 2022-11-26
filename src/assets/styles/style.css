@@ -123,12 +123,13 @@ body {
     width: 100%;
     transition: all 0.45s ease-in-out;
     background-color: rgba(255, 255, 255, 0.1);
+    /* display: none; */
     opacity: 0;
     visibility: hidden;
     z-index: 2;
 }
 .burger.visible {
-    transform: translateY(0);
+    /* display: block; */
     visibility: visible;
     opacity: 1;
 }
@@ -451,6 +452,7 @@ body {
     position: relative;
     grid-column: 4 span;
     margin: 0 auto;
+    font-weight: 600;
 }
 
 .features .features__item::before {
@@ -460,10 +462,6 @@ body {
     content: '•';
     font-size: 2rem;
     line-height: 1.125rem;
-}
-
-.features .features__link {
-    font-weight: 600;
 }
 
 /* /. features */
