@@ -1,4 +1,11 @@
 @media screen and (max-width: 1200px) {
+    .promotion .promotion__section {
+        grid-gap: 2rem;
+    }
+    .promotion .promotion__preview,
+    .promotion .promotion__description {
+        grid-column: 12 span;
+    }
     .order .order__wrapper {
         grid-template-columns: repeat(8, 1fr);
     }
@@ -12,14 +19,18 @@
 
 @media screen and (max-width: 1024px) {
     .product .product__wrapper {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'section-left section-left section-left'
+            'preview preview preview'
+            'section-right section-right section-right';
     }
     .product .product__preview {
-        grid-column: 8 span;
+        margin: 0 auto;
+        height: 35rem;
     }
     .product .product__section {
         flex-direction: row;
-        grid-column: 8 span;
         justify-content: space-between;
     }
     .product .product__ingredient .ingredient__image {
@@ -32,6 +43,25 @@
 }
 
 @media screen and (max-width: 992px) {
+    .about .about__content {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .about .about__wrapper {
+        padding: 5rem 0 2rem 0;
+    }
+    .about .about__preview,
+    .about .about__description {
+        grid-column: 8 span;
+    }
+    .about .about__description {
+        margin-left: 1rem;
+    }
+    .about .about__preview {
+        min-height: 30rem;
+    }
+    .product .product__preview {
+        min-height: 10rem;
+    }
     .promotion .promotion__section {
         grid-template-columns: repeat(8, 1fr);
         grid-gap: 2rem;
@@ -52,19 +82,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .about .about__content {
-        grid-template-columns: repeat(8, 1fr);
-    }
-    .about .about__preview,
-    .about .about__description {
-        grid-column: 8 span;
-    }
-    .about .about__description {
-        margin-left: 1rem;
-    }
-}
-
 @media screen and (max-width: 700px) {
     .promotion .promotion__features {
         grid-template-columns: repeat(8, 1fr);
@@ -79,6 +96,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    .product .product__wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'section-left'
+            'preview'
+            'section-right';
+    }
     .product .product__section {
         flex-direction: column;
     }
@@ -102,15 +126,12 @@
         display: flex;
     }
     .about .about__content,
-    .product .product__wrapper,
     .promotion .promotion__section,
     .promotion .features {
         grid-template-columns: repeat(4, 1fr);
     }
     .about .about__preview,
     .about .about__description,
-    .product .product__section,
-    .product .product__preview,
     .promotion .promotion__preview,
     .promotion .promotion__description,
     .promotion .features__item {
@@ -122,6 +143,10 @@
     }
     .order .price {
         margin-bottom: 1.4rem;
+    }
+    .button-top {
+        padding: 1rem;
+        margin: 1rem;
     }
 }
 

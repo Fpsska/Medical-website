@@ -80,6 +80,11 @@ body {
     position: fixed;
     margin: 2rem;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+.button-top:hover {
+    transform: scale(1.1);
 }
 
 .button-top svg {
@@ -274,7 +279,7 @@ body {
     grid-column: 6 span;
     position: relative;
     overflow: hidden;
-    min-height: 22rem;
+    min-height: 24rem;
 }
 
 .about .about__image {
@@ -313,16 +318,20 @@ body {
 
 .product .product__wrapper {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        'section-left preview section-right'
+        'section-left preview section-right'
+        'section-left preview section-right';
     grid-gap: var(--gap);
     align-items: center;
 }
 
 .product .product__preview {
+    grid-area: preview;
     position: relative;
     min-height: 20rem;
     overflow: hidden;
-    grid-column: 6 span;
 }
 
 .product .product__image {
@@ -333,7 +342,14 @@ body {
 .product .product__section {
     display: flex;
     flex-direction: column;
-    grid-column: 3 span;
+}
+
+.product .product__section--left {
+    grid-area: section-left;
+}
+
+.product .product__section--right {
+    grid-area: section-right;
 }
 
 .product .product__ingredient:not(:last-child) {
@@ -477,7 +493,7 @@ body {
     position: relative;
     min-height: 40rem;
     overflow: hidden;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.25rem;
 }
 
 .order .order__image {
