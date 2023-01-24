@@ -1,6 +1,6 @@
 ###### _powered by :_
 
-- [imask.js.](https://imask.js.org/)
+- [imask.js](https://imask.js.org/)
 
 #
 
