@@ -10,13 +10,11 @@ html {
     height: 100%;
 }
 
-html,
 body {
-    height: 100%;
+    position: relative;
     padding: 0;
     margin: 0;
     color: var(--dark-color);
-    font-size: var(--font-size);
     font-family: Roboto, sans-serif;
 
     display: flex;
@@ -24,25 +22,13 @@ body {
     height: 100%;
 }
 
-body {
-    position: relative;
-}
-
-.header {
-    flex: 0 0 auto;
-}
-
 .main {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     position: relative;
 }
 
 .main > section:not(:last-child) {
     margin-bottom: 6rem;
-}
-
-.footer {
-    flex: 0 0 auto;
 }
 
 /* /. general-styles */
@@ -66,6 +52,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
 }
 
 .button-top {
@@ -123,13 +117,11 @@ body {
     width: 100%;
     transition: all 0.45s ease-in-out;
     background-color: rgba(255, 255, 255, 0.1);
-    /* display: none; */
     opacity: 0;
     visibility: hidden;
     z-index: 2;
 }
 .burger.visible {
-    /* display: block; */
     visibility: visible;
     opacity: 1;
 }
@@ -278,15 +270,11 @@ body {
 .about .about__preview {
     z-index: 1;
     grid-column: 6 span;
-    position: relative;
-    overflow: hidden;
     min-height: 24rem;
 }
 
 .about .about__image {
     z-index: 1;
-    width: 100%;
-    height: 100%;
 }
 
 .about .about__description {
@@ -330,14 +318,8 @@ body {
 
 .product .product__preview {
     grid-area: preview;
-    position: relative;
-    min-height: 20rem;
-    overflow: hidden;
-}
-
-.product .product__image {
-    width: 100%;
-    height: 100%;
+    min-height: 35rem;
+    max-height: 40rem;
 }
 
 .product .product__section {
@@ -363,16 +345,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-shrink: 0;
+    position: relative;
+}
+
+.ingredient .ingredient__preview {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    border-radius: 100%;
 }
 
 .ingredient .ingredient__image {
     border-radius: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 1rem;
 }
 
 .ingredient .ingredient__caption {
@@ -387,14 +371,7 @@ body {
 }
 
 .review .review__preview {
-    position: relative;
-    overflow: hidden;
     min-height: 300px;
-}
-
-.review .review__image {
-    width: 100%;
-    height: 100%;
 }
 
 .review .review__author {
@@ -424,14 +401,7 @@ body {
 
 .promotion .promotion__preview {
     grid-column: 6 span;
-    position: relative;
     min-height: 40rem;
-    overflow: hidden;
-}
-
-.promotion .promotion__image {
-    width: 100%;
-    height: 100%;
 }
 
 .promotion__description {
@@ -488,17 +458,8 @@ body {
 }
 
 .order .order__preview {
-    position: relative;
     min-height: 40rem;
-    overflow: hidden;
     margin-bottom: 0.25rem;
-}
-
-.order .order__image {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .order .order__product-name {
